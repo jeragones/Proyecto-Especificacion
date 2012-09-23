@@ -125,6 +125,10 @@ input::input-placeholder {
     box-shadow: 0 2px 1px #4b4b4b;
 }
 
+.ingresar: hover {
+    opacity:20;
+}
+
 .titulo {
     /* es estilo del titulo //////////////////////////////////////////////////////////////////////////////////// */ 
 }

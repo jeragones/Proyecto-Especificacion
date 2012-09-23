@@ -1,7 +1,8 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1 Strict//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11-strict.dtd">
 <html lang="en">
 <head>  
-    <meta charset ="UTF-8">
+    <!--<meta charset ="UTF-8">-->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="Keywords" content="Futbol,Costa Rica,Televisión,Radio,Música,Deportes,Partidos,Juegos" >
     <meta name="Description" content="descripción de la página" > <!-- FALTA -->
     <meta name="Robots" content="all" >
@@ -10,12 +11,11 @@
 
 </head>  
 <body>  
-    <section class="inicio">
-        <input type="" class="usuario" placeholder="Usuario:">
-        <input type="" class="password" placeholder="Contrasena:">
-        <button class="ingresar">Ingresar</button>
-        </input>
-    </section>
+    <form class="inicio" method="post" action="inicio.php">
+        <input id="usuario" class="usuario" name="usuario" placeholder="Usuario:">
+        <input id="pass" type="" class="password" name="pass" placeholder="Contrasena:">
+        <input id="ingresar" class="ingresar" type="submit" value="submit">Ingresar</input>
+    </form>
     <div class="main">
         <header>  
             <h1 class="titulo">Page title</h1>  
