@@ -11,10 +11,10 @@
 
 </head>  
 <body>  
-    <form class="inicio" method="post" action="inicio.php">
+    <form class="inicio" method="POST" action="inicio.php">
         <input id="usuario" class="usuario" name="usuario" placeholder="Usuario:">
         <input id="pass" type="" class="password" name="pass" placeholder="Contrasena:">
-        <input id="ingresar" class="ingresar" type="submit" value="submit">Ingresar</input>
+        <input id="ingresar" class="ingresar" name="ingresar" type="Submit" value="Login"></input>
     </form>
     <div class="main">
         <header>  
@@ -35,30 +35,29 @@
         <section>  
             <!-- Main content area (lugar de la pagina que va a estar cambiando)-->  
         </section>  
-        <aside>  
-            <section>
-                <div class="banner1"><a href="">Anuncios</a></div>
-                <div class="banner2"><a href="">Anuncios</a></div>
-                <div class="banner3"><a href="">Anuncios</a></div>
-                <div class="banner4"><a href="">Anuncios</a></div>
-                <div class="banner5"><a href="">Anuncios</a></div>
-                <!--banners publicitarios-->
-            </section>
-            <section>
-                <nav class="menu">
-                    <ul>
-                        <li><a href="">Enlace 1</a></li>
-                        <li><a href="">Enlace 2</a></li>
-                        <li><a href="">Enlace 3</a></li>
-                        <li><a href="">Enlace 4</a></li>
-                        <li><a href="">Enlace 5</a></li>
-                        <li><a href="">Enlace 6</a></li>
-                    </ul>
-                </nav>
-                <!--menu de enlaces a otras secciones de la pagina-->
-            </section>
-            <!-- Sidebar -->  
-        </aside>  
+        <aside> 
+            <section class="banner">
+                <div ><a href="">Anuncios</a></div>
+                <div ><a href="">Anuncios</a></div>
+                <div ><a href="">Anuncios</a></div>
+                <div ><a href="">Anuncios</a></div>
+                <div ><a href="">Anuncios</a></div>
+                <!--banners publicitarios--> 
+            </section> 
+        </aside> 
+        <aside class="menu">
+            <nav class="enlaces">
+                <ul>
+                    <li><a href="">Enlace 1</a></li>
+                    <li><a href="">Enlace 2</a></li>
+                    <li><a href="">Enlace 3</a></li>
+                    <li><a href="">Enlace 4</a></li>
+                    <li><a href="">Enlace 5</a></li>
+                    <li><a href="">Enlace 6</a></li>
+                </ul>
+            </nav>
+            <!--menu de enlaces a otras secciones de la pagina-->
+        </aside> 
         <footer>  
             <!-- Footer -->  
             <div class="copyRight">
