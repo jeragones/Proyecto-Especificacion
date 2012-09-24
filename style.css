@@ -1,8 +1,8 @@
 html {
     /* el estilo general de la pagina*/
-    background: -webkit-radial-gradient(rgba(200,155,055,.3) 1%, transparent 100%);
+    background: -webkit-radial-gradient(rgba(200,155,055,.3) 50%, transparent 10%);
     background-color: #4e4e4e;
-    background-size: 5px 5px;
+    background-size: 20px 20px;
     font-family: "Times New Roman", Georgia, serif;
 }
 
@@ -31,13 +31,13 @@ html {
 }
 
 .usuario {
+    border-radius: 8px;
     -moz-border-radius: 8px;
     -ms-border-radius: 8px;
     -o-border-radius: 8px; 
     -webkit-border-radius: 8px;
     background: #191919;
     border-bottom: 1px solid #414141;
-    border-radius: 8px;
     border: none;
     color: white;
     display: inline-block;
