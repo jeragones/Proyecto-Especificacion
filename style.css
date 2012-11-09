@@ -162,11 +162,12 @@ input::input-placeholder {
     -o-box-shadow: 0 2px 1px #4b4b4b;
     -ms-box-shadow: 0 2px 1px #4b4b4b;
     box-shadow: 0 2px 1px #4b4b4b;
+    margin-top: 0px;
 } /* dark grey bg */
 
 
 .navegacion li {
-    width: 10%; 
+    width: 15%; 
     vertical-align: middle;
     display: inline-block;
    /* margin-left: 15px;*/
