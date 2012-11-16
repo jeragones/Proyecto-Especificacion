@@ -80,6 +80,10 @@ echo ("Value is = ".$y);
         </ul>
     </inicio>
     <div class="main">
+        <?php
+            require('conexionBD.php');
+        ?>
+
         <header class = "header">  
             <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="32" height="32">
                 <param name="movie" value="DouticoHeader.swf" />
@@ -104,7 +108,7 @@ echo ("Value is = ".$y);
             </object>
         </div>               
         <article>   
-          
+              
             <!-- Main content area (lugar de la pagina que va a estar cambiando)-->  
         </article>  
         
