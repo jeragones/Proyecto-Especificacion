@@ -340,25 +340,20 @@ input::input-placeholder {
     border-radius: 5px;    
 }
 
-.copyRight {
-    margin-top: 100px;
-    color: 
-}
 
-aside .banner {
-    background-color:#FF8040;
+.banner {    
     float: left;
-    width:140px;
-    height:100%;
+    width:160px;
+    height:794px;
+    margin-top: 3px;
 }
 
-aside .enlaces {
-    float: right;
-    width: 20%;
-    height: 140px;
-    background: #44B59E;
-    margin-top: 10px;
+.copyRight {
+    height: 50px;
+    margin-top: 800px;
+    margin-left: 10px;
 }
+
 
 
 
