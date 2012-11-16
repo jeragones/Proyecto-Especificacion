@@ -294,23 +294,34 @@ input::input-placeholder {
     overflow:hidden;
     margin-top: 3px;
     height: 40px;  
-    background-color: #444444;
+    background: #444;
+    background: -moz-linear-gradient(#444, #111);
+    background: -webkit-gradient(linear,left bottom,left top,color-stop(0, #111),color-stop(1, #444));
+    background: -webkit-linear-gradient(#444, #111);    
+    background: -o-linear-gradient(#444, #111); 
+    background: -ms-linear-gradient(#444, #111);    
+    background: linear-gradient(#444, #111); 
     -moz-border-radius: 5px;
     border-radius: 5px;
-    text-align: center;  
+
 }
 .navegacion li
 {
-    display:inline;
+    float:left;   
 }
 
-.navegacion ul li a{
+.navegacion a{
+    margin-left: 20px;
+    display: block;
+    height: 18px;
+    text-align: center;
     text-decoration: none; 
-    color: #fff; 
-    padding: 11px 11px; 
+    color: #FFFFFF; 
+    padding: 11px 50px;
 }
 
-.navegacion ul li a:link, a:visited
+
+.navegacion a:link, a:visited
 {
     display:block;
     width:120px;
@@ -326,7 +337,7 @@ input::input-placeholder {
 {     
     background-color:#005CB9;
     -moz-border-radius: 5px;
-    border-radius: 5px;
+    border-radius: 5px;    
 }
 
 .copyRight {
@@ -335,12 +346,10 @@ input::input-placeholder {
 }
 
 aside .banner {
+    background-color:#FF8040;
     float: left;
-    width: 20%;
-    height: 120px;
-    background: orange;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    width:140px;
+    height:100%;
 }
 
 aside .enlaces {
