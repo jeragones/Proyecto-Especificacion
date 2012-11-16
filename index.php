@@ -1,3 +1,6 @@
+<?php
+    require('chat.php');
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1 Strict//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11-strict.dtd">
 <html lang="en">
 <head>  
@@ -80,10 +83,6 @@ echo ("Value is = ".$y);
         </ul>
     </inicio>
     <div class="main">
-        <?php
-            require('conexionBD.php');
-        ?>
-
         <header class = "header">  
             <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="32" height="32">
                 <param name="movie" value="DouticoHeader.swf" />
@@ -108,7 +107,24 @@ echo ("Value is = ".$y);
             </object>
         </div>               
         <article>   
-              
+            <?php
+                require('conexionBD.php');
+            ?>  
+            <div id="mensajes">
+                <?php
+                    //require('chat.php');
+                    $mensajes = obtenerMensaje();
+                    foreach ($mensajes as $mensaje) {
+                        echo '<strong>'.$mensaje['usuario'].' says</strong><br/>';
+                        echo $mensaje['contenido'].'<br/><br/>';
+                    }
+                ?>
+            </div>
+            <form action="index.php" method="POST">
+                <lable>Usuario:<input type="text" name="usuario"></lable>
+                <lable>Mensaje:<input type="text" name="mensaje"></lable>
+                <input type="submit" name="enviar" value="Enviar"/>
+            </from>
             <!-- Main content area (lugar de la pagina que va a estar cambiando)-->  
         </article>  
         
