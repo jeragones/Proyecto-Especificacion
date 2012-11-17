@@ -1,16 +1,19 @@
 <?php
-    
-	$usuario = $_POST['usuario'];
-    $pass = $_POST['pass'];
-
     session_start();
-    if($_POST) {
-    	require_once 'libs/ez_sql_core.php';
-    	require_once 'libs/ez_sql_mysql1.php';
-
-    	&conn = new ezSQL_mysql('root','','prueba1');
-
-    	$usuario = &conn->get_row("SELECT nombre, apellido1 FROM usuarios WHERE usuario='" . $usuario ."' AND pass='" . $pass . "'");
-
-    }
+    include("conexionBD.php");
+    if(isset($_POST['ingresar'])) {
+    	$usuario = $_POST['usuario'];
+    	$pass = $_POST['pass'];
+    	$select = "SELECT usuario FROM usuarios WHERE usuario = '".$usuario."' AND pass = '".$pass."'";
+    	
+    	$query = mysql_query($select,$conexion);
+    	$rows = mysql_num_rows($query);
+    	if($row = mysql_fetch_array($query, $rows)) {
+    		$_SESSION['usuario'] = $row['usuario'];
+    		header('Location: index.php');
+    	} else {
+    		echo "no existe el usuario";
+    		header('Refresh:2; index.php');
+    	}
+    } 
 ?>

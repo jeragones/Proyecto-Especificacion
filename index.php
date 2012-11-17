@@ -18,7 +18,7 @@
     <script type="text/javascript" src="login.js"></script>
 
 
-    <script type="text/javascript">
+    <!--<script type="text/javascript">
 
         function validar(user,pass) {
             <?php
@@ -41,31 +41,13 @@
                     }
                 }
             ?>
-/*function jsfunc(x) 
-{ 
-<?PHP 
-$y=print("document.abc.mylist.options[x].text"); 
-echo ("Value is = ".$y); 
-?> 
-} */
-            /*if(user != '' && pass != '') {
-                if(user == 'jeragones' && pass == 'pass') {
-                    alert('Bienvenido ' + user);
-                    document.getElementById('usuario').value = '';
-                    document.getElementById('pass').value = '';
-                } else {
-                    alert('Usuario incorrecto');
-                }
-            } else {
-                alert('Existe un campo nulo');
-            }*/
         }
 
         function contactar(nombre,correo,mensaje) {
             
         }
 
-    </script>
+    </script>-->
 </head>  
 <body>  
     <inicio class="inicio">
@@ -74,12 +56,6 @@ echo ("Value is = ".$y);
             <li><input id="contact" type="button" value="contact" class="btnInicio" data-type="zoomout"/></li>
             <li><input id="login" type="button" value="login" class="btnInicio" data-type="zoomout"/></li>
             <li><input type="button" value="register" class="btnInicio"/></li>
-
-            <!--
-            <li><a class="login" method="POST" action="inicio.php">Iniciar</a></li>
-            <li><input id="usuario" class="usuario" name="usuario" placeholder="Usuario:"></li>
-            <li><input id="pass" type="password" class="password" name="pass" placeholder="Contrasena:"></li>
-            <li><input id="ingresar" class="ingresar" name="ingresar" type="Submit" value="Login"></input></li>-->
         </ul>
     </inicio>
     <div class="main">
@@ -91,12 +67,12 @@ echo ("Value is = ".$y);
             </object>
         </header>  
         <nav class="navegacion">  
-            <ul><li><a onclick="">Televisi&oacuten</a></li>
+            <ul><li><a onclick="">Televisoras</a></li>
                 <li><a onclick="">Radios</a></li>
-                <li><a onclick="">Peri&oacutedicos</a></li>
+                <li><a onclick="">Periodicos</a></li>
                 <li><a onclick="">Deportes</a></li>
                 <li><a onclick="">Herencia</a></li>
-                <li><a onclick="">Pron&oacutestico</a></li>              
+                <li><a onclick="">Pronostico</a></li>              
             </ul>
         </nav> 
         <div class="banner">
@@ -107,29 +83,35 @@ echo ("Value is = ".$y);
             </object>
         </div>               
         <article>   
-            <?php
-                require('conexionBD.php');
+            <?
+                session_start();
+                include("conexionBD.php");
+                if(isset($_SESSiON['usuario'])) {
+                    ?>
+                    <table with="300" height="500">
+                        <form method="POST" action="chat.php">
+                            <tr>
+                                <td><iframe src="mensajes.php" name="chatFrame" width="250" height="400"></iframe></td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" name="mensaje"/> 
+                                    <button type="submit" name="enviar">Enviar</button></td>    
+                            </tr>
+                            <tr>
+                                <? $usuario = $_SESSiON['usuario']; ?>
+                                <td>Esta conectado como <strong><?php echo $usuario; ?></strong></td>
+                            </tr>
+                        </form>
+                    </table>
+                    <?
+                } else {
+                    ?>debes iniciar sesión para poder utilizar el chat<?
+                }
+            }
             ?>  
-            <div id="mensajes">
-                <?php
-                    //require('chat.php');
-                    $mensajes = obtenerMensaje();
-                    foreach ($mensajes as $mensaje) {
-                        echo '<strong>'.$mensaje['usuario'].' says</strong><br/>';
-                        echo $mensaje['contenido'].'<br/><br/>';
-                    }
-                ?>
-            </div>
-            <form action="index.php" method="POST">
-                <lable>Usuario:<input type="text" name="usuario"></lable>
-                <lable>Mensaje:<input type="text" name="mensaje"></lable>
-                <input type="submit" name="enviar" value="Enviar"/>
-            </from>
-            <!-- Main content area (lugar de la pagina que va a estar cambiando)-->  
         </article>  
         
-        <footer>  
-            <!-- Footer -->              
+        <footer>         
             <div class="copyRight">
                 <p>Copyright © Doutico | doutico.com. All rights reserved | Design by Fabricio Salazar Espinoza, Jorge Rojas Aragon&eacutes, Harvey Sand&iacute S&aacutenchez, Marvin Sandoval Ugalde</p>
             </div>
@@ -137,7 +119,7 @@ echo ("Value is = ".$y);
     </div>
 
     <div class="contenedor-login">
-        <div class="ventana-login zoomout">
+        <form class="ventana-login zoomout" action="login.php" method="POST">
             <ul>
                 <label>Usuario:</label>
                 <input id="usuario" class="txtLogin" name="usuario" placeholder="Usuario:"/>
@@ -147,11 +129,10 @@ echo ("Value is = ".$y);
                 <input id="pass" class="txtLogin" name="pass" placeholder="Contrasena:" type="password"/>
             </ul>    
             <ul>
-                <!-- onclick="validar(usuario.value,pass.value)" -->
-                <input id="ingresar" onclick="validar(usuario.value,pass.value)" type="Button" class="btnLogin" name="ingresar" value="Ingresar">
+                <input id="ingresar" type="submit" class="btnLogin" name="ingresar" value="Ingresar">
                 <input id="cerrarL" type="Button" class="btnLogin" value="Cerrar"/>
             </ul>
-        </div>
+        </form>
     </div>
     <div class="contenedor-contact">
         <div class="ventana-contact zoomout">
@@ -159,16 +140,12 @@ echo ("Value is = ".$y);
                 <label>Nombre:</label>
                 <input id="nombre" class="txtContact" name="usuario" placeholder="Nombre Completo:"/>
             
-            
                 <label>Correo:</label>
                 <input id="correo" class="txtContact" name="correo" placeholder="Correo Electrónico:" type="email"/>
               
-            
                 <label>Mensaje:</label>
                 <input id="mensaje" rows="10" cols="20" class="txtContact" name="mensaje" placeholder="Mensaje:"/> 
               
-            
-                <!--onclick="Contactar(usuario.value,pass.value)"-->
                 <input id="enviar" onclick="Contactar(nombre.value,correo.value,mensaje.value)" type="Button" class="btnContact" name="enviar" value="Enviar">
                 <input id="cerrarC" type="Button" class="btnContact" value="Cerrar"/>
             </form>

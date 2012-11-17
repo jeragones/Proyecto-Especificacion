@@ -2,9 +2,12 @@
 	$db_host = 'localhost'	;
 	$db_user = 'root';
 	$db_pass = '';
-	$db_name = 'prueba1';
+	$db_name = 'basedatos';
 
-	if($conexion = mysql_connect($db_host,$db_user,$db_pass)) {
+	$conexion = mysql_connect($db_host,$db_user,$db_pass);
+	$database = mysql_select_db($db_name,$conexion);
+	
+	/*if($conexion = mysql_connect($db_host,$db_user,$db_pass)) {
 		echo 'conectado a la base de datos <br/>';
 
 		if($database = mysql_select_db($db_name,$conexion)) {
@@ -14,6 +17,6 @@
 		}
 	} else {
 		echo 'imposible conetar a sql server <br/>';	
-	}
+	}*/
 
 ?>
