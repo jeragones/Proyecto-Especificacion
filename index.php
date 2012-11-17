@@ -17,7 +17,6 @@
     <script type="text/javascript" src="contact.js"></script>
     <script type="text/javascript" src="login.js"></script>
 
-
     <!--<script type="text/javascript">
 
         function validar(user,pass) {
@@ -89,13 +88,13 @@
                 if(isset($_SESSiON['usuario'])) {
                     ?>
                     <table with="300" height="500">
-                        <form method="POST" action="chat.php">
+                        <form class="chat" method="POST" action="chat.php">
                             <tr>
-                                <td><iframe src="mensajes.php" name="chatFrame" width="250" height="400"></iframe></td>
+                                <td><iframe class="mensajes" src="mensajes.php" name="chatFrame" width="250" height="400"></iframe></td>
                             </tr>
                             <tr>
-                                <td><input type="text" name="mensaje"/> 
-                                    <button type="submit" name="enviar">Enviar</button></td>    
+                                <td><input class="txtMensaje" type="text" name="mensaje"/> 
+                                    <button class="btnInicio" type="submit" name="enviar">Enviar</button></td>    
                             </tr>
                             <tr>
                                 <? $usuario = $_SESSiON['usuario']; ?>

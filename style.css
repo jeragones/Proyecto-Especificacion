@@ -185,6 +185,22 @@ html {
 }
 
 
+.chat {
+
+}
+
+.mensajes {
+    background: #A4D1FF;
+    background: -moz-linear-gradient(#F0F0EE, #0061C1);
+    background: -webkit-gradient(linear,left bottom,left top,color-stop(0, #0061C1),color-stop(1, #F0F0EE));  
+    background: -webkit-linear-gradient(#F0F0EE, #0061C1);    
+    background: -o-linear-gradient(#F0F0EE, #0061C1); 
+    background: -ms-linear-gradient(#F0F0EE, #0061C1);    
+    background: linear-gradient(#F0F0EE, #0061C1);    
+    border: 1px solid #00366C;
+}
+
+
 /*
 .inicio ul li a{
     text-decoration: none; /* removes the underline from the menu text 

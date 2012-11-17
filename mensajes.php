@@ -7,6 +7,16 @@
 		$rows = mysql_num_rows($query);
 		if($rows>0) {
 			while($row = mysql_fetch_array($query)) {
+				if(isset($_SESSION['usuario']) && isset($_SESSION['permiso']) == 2) {
+					?>
+						<a href="borrar.php"><font color="red">Borrar</font></a>
+					<?
+				} else {
+					?>
+						&nbsp;
+					<?php		
+				}
+
 				$usuario = $row['usuario'];
 				$mensaje = $row['mensaje'];
 				?>
@@ -19,4 +29,5 @@
 			<?php
 		}
 	}
+	header('refresh: 2; mensajes.php');
 ?>
