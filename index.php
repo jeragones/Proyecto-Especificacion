@@ -1,6 +1,3 @@
-<?php
-    require('chat.php');
-?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1 Strict//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11-strict.dtd">
 <html lang="en">
 <head>  
@@ -51,10 +48,10 @@
 <body>  
     <inicio class="inicio">
         <ul>
-            <li><input type="button" value="home" class="btnInicio"/></li>
-            <li><input id="contact" type="button" value="contact" class="btnInicio" data-type="zoomout"/></li>
-            <li><input id="login" type="button" value="login" class="btnInicio" data-type="zoomout"/></li>
-            <li><input type="button" value="register" class="btnInicio"/></li>
+            <li><input type="button" value="Inicio" class="btnInicio"/></li>
+            <li><input id="contact" type="button" value="Contactar" class="btnInicio" data-type="zoomout"/></li>
+            <li><input id="login" type="button" value="Sesión" class="btnInicio" data-type="zoomout"/></li>
+            <li><input type="button" value="Registrarse" class="btnInicio"/></li>
         </ul>
     </inicio>
     <div class="main">
@@ -106,7 +103,7 @@
                 } else {
                     ?>debes iniciar sesión para poder utilizar el chat<?
                 }
-            }
+            
             ?>  
         </article>  
         

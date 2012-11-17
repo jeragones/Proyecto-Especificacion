@@ -92,7 +92,7 @@ html {
 
 .btnInicio {
     margin-top: 4px;
-    width: 60px;
+    width: 80px;
     height: 30px;
     background: #00366C;
     background: -moz-linear-gradient(#004E9B, #00366C);
@@ -114,12 +114,12 @@ html {
     }
 
     #login {
-        margin-left: 1000px;
+        margin-left: 920px;
     }
 
 .btnLogin {
     margin-top: 4px;
-    width: 70px;
+    width: 80px;
     height: 30px;
     background: #004B97;
     background: -moz-linear-gradient(#005CB9, #004B97);
@@ -154,7 +154,7 @@ html {
 
 .btnContact {
     margin-top: 4px;
-    width: 70px;
+    width: 80px;
     height: 30px;
     background: #004B97;
     background: -moz-linear-gradient(#005CB9, #004B97);
@@ -334,6 +334,7 @@ input::input-placeholder {
     text-decoration: none; 
     color: #FFFFFF; 
     padding: 11px 50px;
+    cursor: pointer;
 }
 
 
