@@ -29,5 +29,5 @@
 			<?php
 		}
 	}
-	header('refresh: 2; mensajes.php');
+	//header('refresh: 2; mensajes.php');
 ?>

@@ -16,7 +16,7 @@
 <body>  
     <inicio class="inicio">
         <ul>
-            <li><input type="button" value="Inicio" <?php header('Location: index.php') ?> class="btnInicio"/></li>
+            <li><input type="button" value="Inicio" <?php header('Location: index.php'); ?> class="btnInicio"/></li>
             <li><input id="contact" type="button" value="Contactar" class="btnInicio" data-type="zoomout"/></li>
         </ul>
     </inicio>

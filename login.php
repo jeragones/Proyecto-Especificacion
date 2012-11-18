@@ -10,7 +10,6 @@
     	$rows = mysql_num_rows($query);
     	if($row = mysql_fetch_array($query, $rows)) {
     		$_SESSION['usuario'] = $row['usuario'];
-            alert();
             if($row['permiso']==2) {
                 header('Location: administrar.php');
             } else {
