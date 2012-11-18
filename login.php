@@ -5,7 +5,6 @@
     	$usuario = $_POST['usuario'];
     	$pass = $_POST['pass'];
     	$select = "SELECT usuario,permiso FROM usuarios WHERE usuario = '".$usuario."' AND pass = '".$pass."'";
-    	
     	$query = mysql_query($select,$conexion);
     	$rows = mysql_num_rows($query);
     	if($row = mysql_fetch_array($query, $rows)) {
