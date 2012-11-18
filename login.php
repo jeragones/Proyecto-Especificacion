@@ -14,10 +14,11 @@
             } else {
                 header('Location: index.php');    
             }
-    		
     	} else {
-    		echo "no existe el usuario";
-    		header('Refresh:2; index.php');
+            ?><script>
+                alert('Nombre de usuario o contrasena incorrecta');
+            </script><?php
+    		header('Location: index.php');
     	}
     } 
 ?>

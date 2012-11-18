@@ -2,10 +2,6 @@
 <html lang="en">
 <head>  
     <!--<meta charset ="UTF-8">-->
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="Keywords" content="Futbol,Costa Rica,Televisión,Radio,Música,Deportes,Partidos,Juegos" >
-    <meta name="Description" content="descripción de la página" > <!-- FALTA -->
-    <meta name="Robots" content="all" >
     <title id="title">Administrador</title>
     <link rel="shortcut icon" href="crflag.gif" type="image/x-icon"/>
     <link rel="stylesheet" href="style.css">
@@ -16,7 +12,8 @@
 <body>  
     <inicio class="inicio">
         <ul>
-            <li><input type="button" value="Inicio" <?php header('Location: index.php'); ?> class="btnInicio"/></li>
+            <!-- src="index.php" onclick="index.php" -->
+            <li><input type="button" value="Inicio" href="index.php"   class="btnInicio"/></li>
             <li><input id="contact" type="button" value="Contactar" class="btnInicio" data-type="zoomout"/></li>
         </ul>
     </inicio>
