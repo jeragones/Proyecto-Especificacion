@@ -35,10 +35,8 @@
                 <li><a onclick="cargarAjax('Categorias/pronosticoAdmin.php','contenido')">Pronostico</a></li>              
             </ul>
         </nav>   
-        <section class="contenido">
-            <article class="content">   
-            
-            </article>  
+        <section id="contenido">
+              
         </section>          
         
         <footer>         
