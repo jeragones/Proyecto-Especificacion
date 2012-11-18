@@ -72,11 +72,20 @@
             </ul>
         </nav> 
         <div class="banner">
-            <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="32" height="32">
-                <param name="movie" value="Banner1.swf" />
-                <param name="quality" value="high" />
-                <embed src="Banner1.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="160" height="397"></embed>
-            </object>
+            <div class = "banner1">
+                <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="32" height="32">
+                    <param name="movie" value="Banner1.swf" />
+                    <param name="quality" value="high" />
+                    <embed src="Banner1.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="160" height="397"></embed>
+                </object> 
+            </div>
+            <div class = "banner2">
+                <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="32" height="32">
+                    <param name="movie" value="Banner2.swf" />
+                    <param name="quality" value="high" />
+                    <embed src="Banner2.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="160" height="397"></embed>
+                </object> 
+            </div>                 
         </div>               
         <article>   
             <?

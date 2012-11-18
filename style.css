@@ -365,9 +365,21 @@ input::input-placeholder {
     margin-top: 3px;
 }
 
+.banner1 {
+    margin-top:3px;
+    width: 160;
+    height: 394;
+}
+
+.banner2 {
+    margin-top:3px;
+    width: 160;
+    height: 394;
+}
+
 .copyRight {
-    height: 50px;
-    margin-top: 800px;
+    height: 20px;
+    margin-top: 300px;
     margin-left: 10px;
 }
 
