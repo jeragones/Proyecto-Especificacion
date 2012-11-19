@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Televisoras</title>
+	<link rel="shortcut icon" href="crflag.jpg" type="image/x-icon"/>
+	<link rel="stylesheet" href="style.css">
+	<script type="text/javascript" src="/jwplayer/jwplayer.js"></script>
+</head>
+<body>
+	
+    <inicio class="inicio">
+        <ul>
+            <li><input type="button" value="Inicio" class="btnInicio"/></li>
+            <li><input id="contact" type="button" value="Contactar" class="btnInicio" data-type="zoomout"/></li>
+            <li><input id="login" type="button" value="Sesión" class="btnInicio" data-type="zoomout"/></li>
+            <li><input type="button" value="Registrarse" class="btnInicio"/></li>
+        </ul>
+    </inicio>
+
+
+    <div class="main">
+        <header class = "header">  
+            <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="32" height="32">
+                <param name="movie" value="DouticoHeader.swf" />
+                <param name="quality" value="high" />
+                <embed src="DouticoHeader.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="1100" height="110"></embed>
+            </object>
+        </header>  
+
+        <nav class="navegacion">  
+            <ul><li><a onclick="">Radios</a></li>
+                <li><a onclick="">Periodicos</a></li>
+                <li><a onclick="">Deportes</a></li>
+                <li><a onclick="">Herencia</a></li>
+                <li><a onclick="">Pronostico</a></li>              
+            </ul>
+        </nav> 
+
+
+
+
+
+        <article ID="reproductor"> 
+
+            <video id="container" controls poster="http://media-cache-ec5.pinterest.com/avatars/televisoradecr-1350398776_600.jpg"       width="720" height="400">   
+                <source src="Videos/teletica.mp4" type='video/mp4; codecs="avc1,mp4a"'></source>
+            </video>
+            <script type="text/javascript">
+                jwplayer("container").setup();  
+            </script>
+
+            <aside ID="linksTV">
+                <nav>
+                   <ul>
+                     <h1>Televisora Nacional</h1>  
+                     <li><a href="" title="">Canales</a></li>
+                     <li><a href="" title="">Canales</a></li>
+                     <li><a href="" title="">Canales</a></li>
+                     <li><a href="" title="">Canales</a></li>
+                     <li><a href="" title="">Canales</a></li>
+                     <li><a href="" title="">Canales</a></li>
+                     <li><a href="" title="">Canales</a></li>
+                     <li><a href="" title="">Canales</a></li>
+                     <li><a href="" title="">Canales</a></li>
+                     <li><a href="" title="">Canales</a></li>
+                  </ul>
+                </nav>
+            </aside>
+        </article>
+
+        <footer>         
+            <div class="copyRight">
+                <p>Copyright © Doutico | doutico.com. All rights reserved | Design by Fabricio Salazar Espinoza, Jorge Rojas Aragon&eacutes, Harvey Sand&iacute S&aacutenchez, Marvin Sandoval Ugalde</p>
+            </div>
+        </footer>  
+
+
+	
+</body>
+</html>
