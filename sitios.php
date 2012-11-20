@@ -1,37 +1,37 @@
 <?php
     session_start();
     include("conexionBD.php");
-    $temp;
-    /*?><script>
+    $temp=0;
+    ?><script>
         switch(document.URL.split('%', 2)[1]) {
-            case "1":
-                </script>
+            case "x=1":
+                </script><?
                     $temp=1;
-                <script>
+                ?><script>
                 break;
-            case "2":
-                </script>
+            case "x=2":
+                </script><?
                     $temp=2;
-                <script>
+                ?><script>
                 break;
-            case "3":
-                </script>
+            case "x=3":
+                </script><?
                     $temp=3;
-                <script>
+                ?><script>
                 break;
-            case "4":
-                </script>
+            case "x=4":
+                </script><?
                     $temp=4;
-                <script>
+                ?><script>
                 break;
-            case "5":
-                </script>
+            case "x=5":
+                </script><?
                     $temp=5;
-                <script>
+                ?><script>
                 break;
         }
-    </script><?*/
-    $select = "SELECT ID,nombre,url,imagen FROM links WHERE tipo=1 ORDER BY nombre ASC";
+    </script><?php
+    $select = "SELECT ID,nombre,url,imagen FROM links WHERE tipo=".$temp." ORDER BY nombre ASC";
     //$select = "SELECT ID,nombre,url,imagen FROM links WHERE tipo=".$temp." ORDER BY nombre ASC";
     $query = mysql_query($select,$conexion);
     $cont = 0;
@@ -48,6 +48,15 @@
         echo '</tr>';
         $cont = 0;
     }
+    echo '<tr> hola   </tr>';
+    echo '<tr>    </tr>';
+    echo '<tr>    </tr>';
+    echo '<tr>    </tr>';
+    echo '<tr>    </tr>';
+    echo '<tr>    </tr>';
+    echo '<tr>    </tr>';
+    echo '<tr>    </tr>';
+    echo '<tr>    </tr>';
     echo '</table>';
     echo '</div>';
 ?>

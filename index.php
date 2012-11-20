@@ -64,7 +64,7 @@
             </object>
         </header>  
         <nav class="navegacion">  
-            <ul><li><a href="cargarAjax('sitios.php%1','contenido')">Televisoras</a></li>
+            <ul><li><a href="sitios.php?x=1">Televisoras</a></li>
                 <li><a href="cargarAjax('sitios.php%2','contenido')">Radios</a></li>
                 <li><a href="cargarAjax('sitios.php%3','contenido')">Peri&oacutedicos</a></li>
                 <li><a href="cargarAjax('sitios.php%4','contenido')">Deportes</a></li>
