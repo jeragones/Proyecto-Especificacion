@@ -4,9 +4,26 @@
     $select = 'SELECT nombre FROM links';     
     $query = mysql_query($select,$conexion);
     $rows = mysql_num_rows($query);
-    while($row=mysql_fetch_array($query,$rows)){         
-        echo '<div><strong>'.$row['nombre'].'</strong><br></div>';     
-    }  
+    //$rows = mysql_both($query);
+
+    //while(){
+    if($rows>0) {
+        while($row = mysql_fetch_array($query)) {
+            $nombre = $row['nombre'];
+            /*?>
+                <div><strong> <? echo $nombre ?></strong><br></div>
+            <?*/
+            echo '<div><strong>'.$nombre.'</strong><br></div>';     
+        }
+    } else {
+        ?>
+            &nbsp;
+        <?php
+    }        
+        //$row=mysql_fetch_array($query)
+        
+    //}
+    mysql_free_result($query);  
 ?>
 		
 
