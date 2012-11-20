@@ -128,23 +128,23 @@
         <form class="ventana-registro zoomout" action="registro.php" method="POST">
             <ul>
                 <label>Usuario:</label>
-                <input id="usuarioReg" class="txtLogin" name="usuario" placeholder="Usuario:"/>
+                <input id="usuarioReg" class="txtRegistro" name="usuarioReg" placeholder="Usuario:"/>
             </ul>
             <ul>
                 <label>Contraseña:</label>
-                <input id="passReg" class="txtLogin" name="pass" placeholder="Contraseña:"/>
+                <input id="passReg" class="txtRegistro" name="passReg" placeholder="Contraseña:"/>
             </ul>
             <ul>
                 <label>Correo Electr&oacutenico:</label>
-                <input id="emailReg" class="txtLogin" name="email" placeholder="Correo Electr&oacutenico:"/>
+                <input id="emailReg" class="txtRegistro" name="emailReg" placeholder="Correo Electr&oacutenico:"/>
             </ul>
              <ul>
                 <label>Pa&iacutes:</label>
-                <input id="paisReg" class="txtLogin" name="pais" placeholder="Pa&iacutes:"/>
+                <input id="paisReg" class="txtRegistro" name="paisReg" placeholder="Pa&iacutes:"/>
             </ul>           
             <ul>
-                <input id="ingresarReg" type="submit" class="btnLogin" name="ingresar" value="Ingresar">
-                <input id="cerrarReg" type="Button" class="btnLogin" value="Cerrar"/>
+                <input id="ingresarReg" type="submit" class="btnRegistro" name="ingresarReg" value="Ingresar">
+                <input id="cerrarReg" type="Button" class="btnRegistro" value="Cerrar"/>
             </ul>
         </form>
     </div>
