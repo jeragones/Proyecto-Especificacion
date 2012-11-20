@@ -52,7 +52,7 @@
             <li><input type="button" value="Inicio" class="btnInicio"/></li>
             <li><input id="contact" type="button" value="Contactar" class="btnInicio" data-type="zoomout"/></li>
             <li><input id="login" type="button" value="Sesión" class="btnInicio" data-type="zoomout"/></li>
-            <li><input id="regist" type="button" value="Registrarse" class="btnInicio"/></li>
+            <li><input id="regist" type="button" value="Registrarse" class="btnInicio" data-type="zoomout"/></li>
         </ul>
     </inicio>
     <div class="main">
@@ -122,23 +122,23 @@
         <form class="ventana-registro zoomout" action="registro.php" method="POST">
             <ul>
                 <label>Usuario:</label>
-                <input id="usuarioReg" class="txtRegistro" name="usuarioReg" placeholder="Usuario:"/>
+                <input id="usuarioReg" class="txtLogin" name="usuarioReg" placeholder="Usuario:"/>
             </ul>
             <ul>
                 <label>Contraseña:</label>
-                <input id="passReg" class="txtRegistro" name="passReg" placeholder="Contraseña:"/>
+                <input id="passReg" class="txtLogin" name="passReg" placeholder="Contraseña:"/>
             </ul>
             <ul>
                 <label>Correo Electr&oacutenico:</label>
-                <input id="emailReg" class="txtRegistro" name="emailReg" placeholder="Correo Electr&oacutenico:"/>
+                <input id="emailReg" class="txtLogin" name="emailReg" placeholder="Correo Electr&oacutenico:"/>
             </ul>
              <ul>
                 <label>Pa&iacutes:</label>
-                <input id="paisReg" class="txtRegistro" name="paisReg" placeholder="Pa&iacutes:"/>
+                <input id="paisReg" class="txtLogin" name="paisReg" placeholder="Pa&iacutes:"/>
             </ul>           
             <ul>
-                <input id="ingresarReg" type="submit" class="btnRegistro" name="ingresarReg" value="Ingresar">
-                <input id="cerrarReg" type="Button" class="btnRegistro" value="Cerrar"/>
+                <input id="ingresarReg" type="submit" class="btnLogin" name="ingresarReg" value="Ingresar">
+                <input id="cerrarReg" type="Button" class="btnLogin" value="Cerrar"/>
             </ul>
         </form>
     </div>
