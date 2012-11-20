@@ -13,6 +13,7 @@
     <script>!window.jQuery && document.write(unescape('%3Cscript src="jquery-1.7.1.min.js"%3E%3C/script%3E'))</script>
     <script type="text/javascript" src="contact.js"></script>
     <script type="text/javascript" src="login.js"></script>
+    <script type="text/javascript" src="registro.js"></script>
 
     <!--<script type="text/javascript">
 
@@ -51,7 +52,7 @@
             <li><input type="button" value="Inicio" class="btnInicio"/></li>
             <li><input id="contact" type="button" value="Contactar" class="btnInicio" data-type="zoomout"/></li>
             <li><input id="login" type="button" value="Sesión" class="btnInicio" data-type="zoomout"/></li>
-            <li><input type="button" value="Registrarse" class="btnInicio"/></li>
+            <li><input id="regist" type="button" value="Registrarse" class="btnInicio"/></li>
         </ul>
     </inicio>
     <div class="main">
@@ -121,6 +122,31 @@
                 <p>Copyright © Doutico | doutico.com. All rights reserved | Design by Fabricio Salazar Espinoza, Jorge Rojas Aragon&eacutes, Harvey Sand&iacute S&aacutenchez, Marvin Sandoval Ugalde</p>
             </div>
         </footer>      
+    </div>
+
+    <div class="contenedor-registro">
+        <form class="ventana-registro zoomout" action="registro.php" method="POST">
+            <ul>
+                <label>Usuario:</label>
+                <input id="usuarioReg" class="txtLogin" name="usuario" placeholder="Usuario:"/>
+            </ul>
+            <ul>
+                <label>Contraseña:</label>
+                <input id="passReg" class="txtLogin" name="pass" placeholder="Contraseña:"/>
+            </ul>
+            <ul>
+                <label>Correo Electr&oacutenico:</label>
+                <input id="emailReg" class="txtLogin" name="email" placeholder="Correo Electr&oacutenico:"/>
+            </ul>
+             <ul>
+                <label>Pa&iacutes:</label>
+                <input id="paisReg" class="txtLogin" name="pais" placeholder="Pa&iacutes:"/>
+            </ul>           
+            <ul>
+                <input id="ingresarReg" type="submit" class="btnLogin" name="ingresar" value="Ingresar">
+                <input id="cerrarReg" type="Button" class="btnLogin" value="Cerrar"/>
+            </ul>
+        </form>
     </div>
 
     <div class="contenedor-login">
