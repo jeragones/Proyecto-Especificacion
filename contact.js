@@ -7,7 +7,8 @@ $(document).ready(function() {
 			}, 200);
 		});
 	});
-	$('#cerrarC').click(function() {
+	$('#cerrarC').click(function() {		
 		$('.contenedor-contact').fadeOut().end().find('.ventana-contact').removeClass('ventana-contact-visible');
-	});
+	});	
 });
+

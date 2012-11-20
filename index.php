@@ -65,10 +65,10 @@
         <nav class="navegacion">  
             <ul><li><a onclick="">Televisoras</a></li>
                 <li><a onclick="">Radios</a></li>
-                <li><a onclick="">Periodicos</a></li>
+                <li><a onclick="">Peri&oacutedicos</a></li>
                 <li><a onclick="">Deportes</a></li>
                 <li><a onclick="">Herencia</a></li>
-                <li><a onclick="">Pronostico</a></li>              
+                <li><a onclick="">Pron&oacutestico</a></li>              
             </ul>
         </nav> 
         <div class="banner">
@@ -141,18 +141,23 @@
     </div>
     <div class="contenedor-contact">
         <div class="ventana-contact zoomout">
-            <form method="POST" action="inicio.php">
-                <label>Nombre:</label>
-                <input id="nombre" class="txtContact" name="usuario" placeholder="Nombre Completo:"/>
-            
-                <label>Correo:</label>
-                <input id="correo" class="txtContact" name="correo" placeholder="Correo Electrónico:" type="email"/>
-              
-                <label>Mensaje:</label>
-                <input id="mensaje" rows="10" cols="20" class="txtContact" name="mensaje" placeholder="Mensaje:"/> 
-              
-                <input id="enviar" onclick="Contactar(nombre.value,correo.value,mensaje.value)" type="Button" class="btnContact" name="enviar" value="Enviar">
-                <input id="cerrarC" type="Button" class="btnContact" value="Cerrar"/>
+            <form action="email.php" method="post">
+                <ul>
+                    <label>De:</label>
+                    <input id="email" class="txtContact" name="email" placeholder="Correo Electrónico:" type="email"/>
+                </ul>
+                <ul>
+                    <label>Asunto:</label>
+                    <input id="asunto" class="txtContact" name="asunto" placeholder="Asunto"/>
+                </ul>
+                <ul>
+                    <label>Mensaje:</label>
+                    <input id="mensaje" rows="10" cols="20" class="txtContact" name="mensaje" placeholder="Mensaje:"/></li> 
+                </ul>
+                <ul>
+                    <input name="submit" type="submit" class="btnContact" value="Enviar">
+                    <input id="cerrarC" type="Button" class="btnContact" value="Cerrar"/>   
+                </ul>
             </form>
         </div>
     </div>
