@@ -603,17 +603,29 @@ input::input-placeholder {
   /* Links Referencia de TELEVISORA */
 
   aside{
-    background-color: #96BBE9;   
+    background-image: url('img/fondo3.jpg');  
     border: 1px solid black;
     border-right: 0px;
     float: right;
-    width: 269px;
+    width: 235px;
+    height: 403px;
+
+    }
+  aside nav{
+   font-size: 20px;
   }
-  aside nav, aside section{
+
+  aside section{
     padding: 10px 30px 20px 30px;
   }
 
   #reproductor{
-     padding: 30px 0px 0px 0px;
+     padding: 0px 0px 0px 60px;
+     background-image: url('img/fondo5.jpg');
   }
-            
+
+  #banner_video{
+    padding: 21px 0px 21px 60px;
+    background-image: url('img/fondo1.jpg');
+   
+  }
