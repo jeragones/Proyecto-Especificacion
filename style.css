@@ -337,26 +337,12 @@ input::input-placeholder {
     cursor: pointer;
 }
 
-
-.navegacion a:link, a:visited
-{
-    display:block;
-    width:120px;
-    font-weight:bold;
-    color:#FF0080;
-    background-color:#98bf21;
-    text-align:center;
-    padding:4px;
-    text-decoration:none;
-    text-transform:uppercase;
-}
 .navegacion a:hover,a:active
 {     
     background-color:#005CB9;
     -moz-border-radius: 5px;
     border-radius: 5px;    
 }
-
 
 .banner {    
     float: left;
