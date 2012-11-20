@@ -602,30 +602,38 @@ input::input-placeholder {
 
   /* Links Referencia de TELEVISORA */
 
-  aside{
+
+
+#chat {
     background-image: url('img/fondo3.jpg');  
     border: 1px solid black;
-    border-right: 0px;
     float: right;
-    width: 235px;
-    height: 403px;
+    height: 100%; 
+    width: 259px;  
+     } 
 
-    }
   aside nav{
    font-size: 20px;
   }
+  
+#linksTV{
+    background-image: url('img/fondo3.jpg'); 
+    border:1px solid black;
+    width:200px;
+    float:left;
+    height: 538px; 
+}
 
-  aside section{
-    padding: 10px 30px 20px 30px;
+#container{        
+     height: 535px;     
   }
 
-  #reproductor{
-     padding: 0px 0px 0px 60px;
-     background-image: url('img/fondo5.jpg');
-  }
+#reproductor{
+    background-image: url('img/fondo6.jpg');
+    }
 
-  #banner_video{
+
+#banner_video{
     padding: 21px 0px 21px 60px;
-    background-image: url('img/fondo1.jpg');
-   
+    background-image: url('img/fondo1.jpg');  
   }
