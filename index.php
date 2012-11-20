@@ -130,11 +130,11 @@
             </ul>
             <ul>
                 <label>Correo Electr&oacutenico:</label>
-                <input id="emailReg" class="txtLogin" name="emailReg" placeholder="Correo Electr&oacutenico:"/>
+                <input id="emailReg" class="txtLogin" name="emailReg" placeholder="Correo Electrónico:"/>
             </ul>
              <ul>
                 <label>Pa&iacutes:</label>
-                <input id="paisReg" class="txtLogin" name="paisReg" placeholder="Pa&iacutes:"/>
+                <input id="paisReg" class="txtLogin" name="paisReg" placeholder="País:"/>
             </ul>           
             <ul>
                 <input id="ingresarReg" type="submit" class="btnLogin" name="ingresarReg" value="Ingresar">
@@ -161,11 +161,7 @@
     </div>
     <div class="contenedor-contact">
         <div class="ventana-contact zoomout">
-            <form action="email.php" method="post">
-                <ul>
-                    <label>De:</label>
-                    <input id="email" class="txtContact" name="email" placeholder="Correo Electrónico:" type="email"/>
-                </ul>
+            <form action="email.php" method="post">               
                 <ul>
                     <label>Asunto:</label>
                     <input id="asunto" class="txtContact" name="asunto" placeholder="Asunto"/>

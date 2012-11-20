@@ -7,6 +7,6 @@ if (isset($_POST['submit'])) {
 	$mensaje = $_POST['mensaje'];
 	mail("fabri10.se@gmail.com","test subject",$mensaje,$headers);
 } else {
-	echo "No se pudo";
+	echo "No se pudo enviar el correo";
 }
 ?>
