@@ -15,9 +15,9 @@
                 alert("Este nombre de usuario ya ha sido registrado");
             </script>
             <?               
-        }
-        else {
+        } else {
             mysql_query("INSERT INTO usuarios VALUES ('"$usuario"', '"$pass"', '"$email"', '"$pais"')");
             mysql_close($conexion);
         }
+    }
 ?>

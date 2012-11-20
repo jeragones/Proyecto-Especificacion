@@ -64,12 +64,12 @@
             </object>
         </header>  
         <nav class="navegacion">  
-            <ul><li><a onclick="">Televisoras</a></li>
-                <li><a onclick="">Radios</a></li>
-                <li><a onclick="">Peri&oacutedicos</a></li>
-                <li><a onclick="">Deportes</a></li>
-                <li><a onclick="">Herencia</a></li>
-                <li><a onclick="">Pron&oacutestico</a></li>              
+            <ul><li><a href="cargarAjax('sitios.php%1','contenido')">Televisoras</a></li>
+                <li><a href="cargarAjax('sitios.php%2','contenido')">Radios</a></li>
+                <li><a href="cargarAjax('sitios.php%3','contenido')">Peri&oacutedicos</a></li>
+                <li><a href="cargarAjax('sitios.php%4','contenido')">Deportes</a></li>
+                <li><a href="cargarAjax('sitios.php%5','contenido')">Herencia</a></li>
+                <li><a href="cargarAjax('sitios.php%6','contenido')">Pron&oacutestico</a></li>              
             </ul>
         </nav> 
         <div class="banner">
@@ -88,14 +88,17 @@
                 </object> 
             </div>                 
         </div>               
-        <article>   
+        <article id="contenido">   
+              
+        </article>  
+        <section class="chat">
             <?
                 session_start();
                 include("conexionBD.php");
                 if(isset($_SESSiON['usuario'])) {
                     ?>
                     <table with="300" height="500">
-                        <form class="chat" method="POST" action="chat.php">
+                        <form method="POST" action="chat.php">
                             <tr>
                                 <td><iframe class="mensajes" src="mensajes.php" name="chatFrame" width="250" height="400"></iframe></td>
                             </tr>
@@ -103,27 +106,18 @@
                                 <td><input class="txtMensaje" type="text" name="mensaje"/> 
                                     <button class="btnInicio" type="submit" name="enviar">Enviar</button></td>    
                             </tr>
-                            <tr>
-                                <? $usuario = $_SESSiON['usuario']; ?>
-                                <td>Esta conectado como <strong><?php echo $usuario; ?></strong></td>
-                            </tr>
                         </form>
                     </table>
                     <?
-                } else {
-                    ?>debes iniciar sesión para poder utilizar el chat<?
                 }
-            
-            ?>  
-        </article>  
-        
-        <footer>         
-            <div class="copyRight">
-                <p>Copyright © Doutico | doutico.com. All rights reserved | Design by Fabricio Salazar Espinoza, Jorge Rojas Aragon&eacutes, Harvey Sand&iacute S&aacutenchez, Marvin Sandoval Ugalde</p>
-            </div>
-        </footer>      
+            ?>    
+        </section>          
     </div>
-
+    <footer>         
+        <div class="copyRight">
+            <p>Copyright © Doutico | doutico.com. All rights reserved | Design by Fabricio Salazar Espinoza, Jorge Rojas Aragon&eacutes, Harvey Sand&iacute S&aacutenchez, Marvin Sandoval Ugalde</p>
+        </div>
+    </footer>
     <div class="contenedor-registro">
         <form class="ventana-registro zoomout" action="registro.php" method="POST">
             <ul>
