@@ -15,7 +15,7 @@
     <script type="text/javascript" src="login.js"></script>
     <script type="text/javascript" src="registro.js"></script>
 
-    <!--<script type="text/javascript">
+    <script type="text/javascript">
 
         function validar(user,pass) {
             <?php
@@ -65,11 +65,11 @@
         </header>  
         <nav class="navegacion">  
             <ul><li><a href="sitios.php?x=1">Televisoras</a></li>
-                <li><a href="cargarAjax('sitios.php%2','contenido')">Radios</a></li>
-                <li><a href="cargarAjax('sitios.php%3','contenido')">Peri&oacutedicos</a></li>
-                <li><a href="cargarAjax('sitios.php%4','contenido')">Deportes</a></li>
-                <li><a href="cargarAjax('sitios.php%5','contenido')">Herencia</a></li>
-                <li><a href="cargarAjax('sitios.php%6','contenido')">Pron&oacutestico</a></li>              
+                <li><a href="sitios.php?x=2">Radios</a></li>
+                <li><a href="sitios.php?x=3">Peri&oacutedicos</a></li>
+                <li><a href="sitios.php?x=4">Deportes</a></li>
+                <li><a href="sitios.php?x=5">Herencia</a></li>
+                <li><a href="sitios.php?x=6">Pron&oacutestico</a></li>              
             </ul>
         </nav> 
         <div class="banner">
