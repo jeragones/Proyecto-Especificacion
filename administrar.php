@@ -13,8 +13,7 @@
     <inicio class="inicio">
         <ul>
             <!-- src="index.php" onclick="index.php" -->
-            <li><input type="button" value="Inicio" href="index.php"   class="btnInicio"/></li>
-            <li><input id="contact" type="button" value="Contactar" class="btnInicio" data-type="zoomout"/></li>
+            <li><a href="index.php"><input type="button" value="Inicio" class="btnInicio"/></a></li>
         </ul>
     </inicio>
     <div class="main">

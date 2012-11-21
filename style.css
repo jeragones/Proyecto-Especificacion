@@ -21,6 +21,27 @@ html {
     transition: all 1s ease-out;
 }
 
+A:visited {
+    text-decoration:none;
+    color:#7D87FF;
+    font-size: larger;
+}
+
+A:link {
+    text-decoration:none;
+    color:#E1E2DE;
+}
+
+A:active {
+    text-decoration:none;
+    color:#F5F5F3;
+}
+
+A:hover {
+    text-decoration:none;
+    color:#CDDCF1;
+} 
+
 .inicio {
     background: #02639D;
     background: -moz-linear-gradient(#02639D,#033847);
@@ -387,6 +408,26 @@ input::input-placeholder {
     background: linear-gradient(#02639D,#033847);
     color: #FFFFFF;
     border-color: #00293E;
+}
+
+.posiciones1 {
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px; 
+    -webkit-border-radius: 8px;
+    background: -moz-linear-gradient(#02639D,#033847);
+    background: -ms-linear-gradient(#02639D,#033847);
+    background: -o-linear-gradient(#02639D,#033847);
+    background: -webkit-linear-gradient(#02639D,#033847);
+    background: linear-gradient(#02639D,#033847);
+    color: #FFFFFF;
+    border-color: #00293E;
+}
+
+.sitios {
+    float: none;
+    margin-left: 500px;
+    margin-top: 100px;
 }
 
 .fb-like {

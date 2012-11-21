@@ -4,8 +4,11 @@
 	if(isset($_POST['enviar'])) {
 		$usuario = $_SESSION['usuario'];
 		$mensaje = $_POST['mensaje'];
-		$insert = "INSERT INTO chat (usuario,mensaje) VALUES ('".$usuario."','".$mensaje."')";
-		mysql_query($insert,$conexion);
+		if($mensaje!="") {
+			
+			$insert = "INSERT INTO chat (usuario,mensaje) VALUES ('".$usuario."','".$mensaje."')";	
+			mysql_query($insert,$conexion);
+		}
 		header("Location: index.php");
 	}
 ?>

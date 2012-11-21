@@ -11,7 +11,7 @@
 <body>
     <inicio class="inicio">
         <ul>
-            <li><input type="button" value="Inicio" class="btnInicio"/></li>
+            <li><a href="index.php"><input type="button" value="Inicio" class="btnInicio"/></a></li>
             <li><input id="contact" type="button" value="Contactar" class="btnInicio" data-type="zoomout"/></li>
             <li><input id="login" type="button" value="Sesión" class="btnInicio" data-type="zoomout"/></li>
             <li><input type="button" value="Registrarse" class="btnInicio"/></li>
@@ -82,17 +82,10 @@
                                 <td><input class="txtMensaje" type="text" name="mensaje"/> 
                                     <button class="btnInicio" type="submit" name="enviar">Enviar</button></td>    
                             </tr>
-                            <tr>
-                                <? $usuario = $_SESSiON['usuario']; ?>
-                                <td>Esta conectado como <strong><?php echo $usuario; ?></strong></td>
-                            </tr>
                         </form>
                     </table>
                     <?
-                } else {
-                    ?>Debes iniciar sesión para poder utilizar el chat<?
-                }
-            
+                } 
             ?> 
          
        </aside>

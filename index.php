@@ -15,37 +15,6 @@
     <script type="text/javascript" src="login.js"></script>
     <script type="text/javascript" src="registro.js"></script>
     <script type="text/javascript" src="/jwplayer/jwplayer.js"></script>
-
-    <script type="text/javascript">
-
-        function validar(user,pass) {
-            <?php
-                $usuario = print("document.write(user)");
-                $pass = print("document.write(pass)"); 
-                $ingresar = $_POST['ingresar'];
-                            
-                if ($_POST['ingresar']) {
-                    if ($usuario != '' && $pass != '') {
-                        if ($_POST['ingresar'] && $usuario == 'jeragones' // consulta a la BD
-                            && $pass == 'pass' // consulta a la BD
-                            ) {                 
-                            echo '<p>Your message has been sent!</p>';
-                            
-                        } else {
-                            echo '<p>Error!</p>';
-                        }
-                    } else {
-                        echo '<p>You need to fill in all required fields!!</p>';
-                    }
-                }
-            ?>
-        }
-
-        function contactar(nombre,correo,mensaje) {
-            
-        }
-
-    </script>
 </head>  
 <body> 
     <div id="fb-root"></div>
@@ -136,8 +105,6 @@
                     </section> 
                 </td>
             </tr>
-            
-            </tr>
             </table>
             <table >
                 <tr>
@@ -226,62 +193,65 @@
     </div>    
     <div class="contenedor-registro">
         <form class="ventana-registro zoomout" action="registro.php" method="POST">
-            <ul>
-                <label>Usuario:</label>
-                <input id="usuarioReg" class="txtLogin" name="usuarioReg" placeholder="Usuario:"/>
-            </ul>
-            <ul>
-                <label>Contraseña:</label>
-                <input id="passReg" class="txtLogin" name="passReg" placeholder="Contraseña:"/>
-            </ul>
-            <ul>
-                <label>Correo Electr&oacutenico:</label>
-                <input id="emailReg" class="txtLogin" name="emailReg" placeholder="Correo Electrónico:"/>
-            </ul>
-             <ul>
-                <label>Pa&iacutes:</label>
-                <input id="paisReg" class="txtLogin" name="paisReg" placeholder="País:"/>
-            </ul>           
-            <ul>
-                <input id="ingresarReg" type="submit" class="btnLogin" name="ingresarReg" value="Ingresar">
-                <input id="cerrarReg" type="Button" class="btnLogin" value="Cerrar"/>
-            </ul>
+            <table>
+                <tr>
+                    <td><label>Usuario:</label></td>
+                    <td><input id="usuarioReg" class="txtLogin" name="usuarioReg" placeholder="Usuario:"/></td>
+                </tr>
+                <tr>
+                    <td><label>Contraseña:</label></td>
+                    <td><input id="passReg" class="txtLogin" name="passReg" placeholder="Contraseña:"/></td>
+                </tr>
+                <tr>
+                    <td><label>Correo Electronico:</label></td>
+                    <td><input id="emailReg" class="txtLogin" name="emailReg" placeholder="Correo Electrónico:"/></td>
+                </tr>
+                <tr>
+                    <td><label>Pais:</label></td>
+                    <td><input id="paisReg" class="txtLogin" name="paisReg" placeholder="País:"/></td>
+                </tr>
+                <tr>
+                    <td><input id="ingresarReg" type="submit" class="btnLogin" name="ingresarReg" value="Ingresar"/></td>
+                    <td><input id="cerrarReg" type="Button" class="btnLogin" value="Cerrar"/></td>
+                </tr>
+            </table>
         </form>
     </div>
-
     <div class="contenedor-login">
         <form class="ventana-login zoomout" action="login.php" method="POST">
-            <ul>
-                <label>Usuario:</label>
-                <input id="usuario" class="txtLogin" name="usuario" placeholder="Usuario:"/>
-            </ul>
-            <ul>
-                <label>Contraseña:</label>
-                <input id="pass" class="txtLogin" name="pass" placeholder="Contrasena:" type="password"/>
-            </ul>    
-            <ul>
-                <input id="ingresar" type="submit" class="btnLogin" name="ingresar" value="Ingresar">
-                <input id="cerrarL" type="Button" class="btnLogin" value="Cerrar"/>
-            </ul>
+            <table>
+                <tr>
+                    <td><label>Usuario:</label></td>
+                    <td><input id="usuario" class="txtLogin" name="usuario" placeholder="Usuario:"/></td>
+                </tr>
+                <tr>
+                    <td><label>Contraseña:</label></td>
+                    <td><input id="pass" class="txtLogin" name="pass" placeholder="Contrasena:" type="password"/></td>
+                </tr>
+                <tr>
+                    <td><input id="ingresar" type="submit" class="btnLogin" name="ingresar" value="Ingresar"/></td>
+                    <td><input id="cerrarL" type="Button" class="btnLogin" value="Cerrar"/></td>
+                </tr>
+            </table>    
         </form>
     </div>
     <div class="contenedor-contact">
-        <div class="ventana-contact zoomout">
-            <form action="email.php" method="post">               
-                <ul>
-                    <label>Asunto:</label>
-                    <input id="asunto" class="txtContact" name="asunto" placeholder="Asunto"/>
-                </ul>
-                <ul>
-                    <label>Mensaje:</label>
-                    <input id="mensaje" rows="10" cols="20" class="txtContact" name="mensaje" placeholder="Mensaje:"/></li> 
-                </ul>
-                <ul>
-                    <input name="submit" type="submit" class="btnContact" value="Enviar">
-                    <input id="cerrarC" type="Button" class="btnContact" value="Cerrar"/>   
-                </ul>
-            </form>
-        </div>
+        <form class="ventana-contact zoomout" action="email.php" method="POST">               
+            <table>
+                <tr>
+                    <td><label>Asunto:</label></td>
+                    <td><input id="asunto" class="txtLogin" name="asunto" placeholder="Asunto"/></td>
+                </tr>
+                <tr>
+                    <td><label>Mensaje:</label></td>
+                    <td><input id="mensaje" rows="10" cols="20" class="txtLogin" name="mensaje" placeholder="Mensaje:"/></li> </td>
+                </tr>
+                <tr>
+                    <td><input name="submit" type="submit" class="btnLogin" value="Enviar"/></td>
+                    <td><input id="cerrarC" type="Button" class="btnLogin" value="Cerrar"/>   </td>
+                </tr>
+            </table>
+        </form>
     </div>
 </body>  
 </html>  

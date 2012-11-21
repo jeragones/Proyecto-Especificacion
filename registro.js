@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	$('#regist').click(function() {
+	$('#regis').click(function() {
 		type = $(this).attr('data-type');
 		$('.contenedor-registro').fadeIn(function() {
 			window.setTimeout(function(){

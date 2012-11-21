@@ -1,16 +1,14 @@
 <?php
-    $con = mysql_connect("localhost","root","");
-    if (!$con)
-    {
-        die('Could not connect: ' . mysql_error());
-    }
+    session_start();
+    include("conexionBD.php");
 
     $usuario = $_POST['usuarioReg'];
     $pass = $_POST['passReg'];
     $email = $_POST['emailReg'];
     $pais = $_POST['paisReg'];
-    mysql_select_db("usuarios", $con); 
-    $query = mysql_query("SELECT usuario FROM usuarios WHERE usuario = '".$usuario."'");
+    
+    $select = "SELECT usuario FROM usuarios WHERE usuario = '".$usuario."'";
+    $query = mysql_query($select,$conexion);
 
     while($row = mysql_fetch_array($query))
     {
@@ -20,9 +18,16 @@
             history.back();
         </script>
         <?php
-    }  
-    mysql_query("INSERT INTO usuarios (Usuario, Password, Email, Pais) VALUES ('".$usuario."', '".$pass."', '".$email."', '".$pais."')");
-    mysql_close($con);
-
-   
+     }
+     if($usuario!="" && $email!="" && $pais!="" && $pass!="") {
+        mysql_query("INSERT INTO usuarios (usuario, correo, pais, pass, permiso) VALUES ('".$usuario."', '".$email."', '".$pais."', '".$pass."', 0)");
+     } else {
+        ?>
+        <script type="text/javascript">
+            alert("Existen campos vacios");
+        </script>
+        <?php
+     }
+    mysql_close($conexion);
+    header('Location: index.php');
 ?>
