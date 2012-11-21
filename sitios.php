@@ -34,53 +34,21 @@
                 <li><a href="cargarAjax('sitios.php?x=6','contenido')">Pron&oacutestico</a></li>              
             </ul>
         </nav>
-        <table>
-            <tr>
-                <td>
-                    <article>
-                        <?php
-                        echo '<div>';
-                            echo '<table>';
-                        
-                            while($row = mysql_fetch_array($query)) {
-                                echo '<tr>';
-                                    echo '<td><img src="'.$row['imagen'].' width="80" height="80""/></td>';
-                                    echo '<td><a href="'.$row['url'].'">'.$row['nombre'].'</a></td>';
-                                echo '</tr>';
-                            }
-                            echo '</div>';
-                        echo '</table>';
-                        ?>
-                    </article>
-                </td>
-                <td align="right">
-                    <section class="chat">
-                    <?
-                    session_start();
-                    include("conexionBD.php");
-                    if(isset($_SESSiON['usuario'])) {
-                    ?>
-                        <table width="300" height="400">
-                        <form method="POST" action="chat.php">
-                            <tr>
-                                <h3 align="center">Chat</h3>
-                            </tr>
-                            <tr>
-                                <td><iframe class="mensajes" src="mensajes.php" name="chatFrame" width="250" height="300"></iframe></td>
-                            </tr>
-                            <tr>
-                                <td><input class="txtMensaje" type="text" name="mensaje"/> 
-                                    <button class="btnInicio" type="submit" name="enviar">Enviar</button></td>    
-                            </tr>
-                        </form>
-                        </table>
-                    <?
-                    }
-                    ?>    
-                    </section>
-                </td>
-            </tr>
-        </table> 
+        <article>
+            <?php
+            echo '<div>';
+                echo '<table class="posiciones">';
+            
+                while($row = mysql_fetch_array($query)) {
+                    echo '<tr>';
+                        echo '<td><a href="'.$row['url'].'" value="'.$row['nombre'].'"><img src="'.$row['imagen'].'" width="80" height="80""/></a></td>';
+                        echo '<td><a href="'.$row['url'].'">'.$row['nombre'].'</a></td>';
+                    echo '</tr>';
+                }
+                echo '</div>';
+            echo '</table>';
+            ?>
+        </article>
     </div>
     
 ?>
