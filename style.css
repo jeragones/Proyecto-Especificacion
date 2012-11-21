@@ -1,7 +1,7 @@
 html {
     /* el estilo general de la pagina*/
-    background: -webkit-radial-gradient(rgba(0,51,255,.3) 50%, transparent 10%);
-    background-color: #96BBE9;
+    background: -webkit-radial-gradient(rgba(0,51,255,.3) 0%, transparent 10%);
+    background-color: #FFFF80;
     background-size: 10px 10px;
     font-family: "Calibri", Georgia, sans-serif;
 }
@@ -374,7 +374,7 @@ input::input-placeholder {
 
 .posiciones {
     float: left;
-    margin-left: 40px;
+    margin-left: 50px;
     margin-top: 3px;
     -moz-border-radius: 8px;
     -ms-border-radius: 8px;
