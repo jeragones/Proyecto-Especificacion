@@ -1,18 +1,32 @@
-<?php
-    session_start();
-    include("conexionBD.php");
+<html>
     
-    echo 'mierda<br>';    
-    //$temp=0;
-    ?>
-         <script>!window.jQuery && document.write(unescape('%3Cscript src="jquery-1.7.1.min.js"%3E%3C/script%3E'))</script>  
-         <script type="text/javascript">
-            var temp = document.URL.split('?', 2)[0];
-            <?php
-                $algo = print("document.write(temp)");
-                echo $algo;
-            ?>
-        </script>
-    <?php
-    echo 'mierda';
-?>
+    <script type="text/javascript">
+        var temp = document.URL.split('?', 2)[1];
+        switch(temp) {
+        case "x=1":
+            cargarAjax(cargarAjax('tutorials.php','articles');)
+            break;
+        case "x=2":
+            </script><?
+                $temp=2;
+            ?><script>
+            break;
+        case "x=3":
+            </script><?
+                $temp=3;
+            ?><script>
+            break;
+        case "x=4":
+            </script><?
+                $temp=4;
+            ?><script>
+            break;
+        case "x=5":
+            </script><?
+                $temp=5;
+            ?><script>
+            break;
+    }
+        
+    </script>
+</html>
