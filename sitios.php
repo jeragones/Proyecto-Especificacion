@@ -27,11 +27,11 @@
         </header>  
         <nav class="navegacion">  
             <ul><li><a href="sitios.php?x=1">Televisoras</a></li>
-                <li><a href="cargarAjax('sitios.php?x=2','contenido')">Radios</a></li>
-                <li><a href="cargarAjax('sitios.php?x=3','contenido')">Peri&oacutedicos</a></li>
-                <li><a href="cargarAjax('sitios.php?x=4','contenido')">Deportes</a></li>
-                <li><a href="cargarAjax('sitios.php?x=5','contenido')">Herencia</a></li>
-                <li><a href="cargarAjax('sitios.php?x=6','contenido')">Pron&oacutestico</a></li>              
+                <li><a href="sitios.php?x=2">Radios</a></li>
+                <li><a href="sitios.php?x=3">Peri&oacutedicos</a></li>
+                <li><a href="sitios.php?x=4">Deportes</a></li>
+                <li><a href="sitios.php?x=5">Herencia</a></li>
+                <li><a href="sitios.php?x=6">Pron&oacutestico</a></li>              
             </ul>
         </nav>
         <article>
@@ -41,7 +41,7 @@
             
                 while($row = mysql_fetch_array($query)) {
                     echo '<tr>';
-                        echo '<td><a href="'.$row['url'].'" value="'.$row['nombre'].'"><img src="'.$row['imagen'].'" width="80" height="80""/></a></td>';
+                        echo '<td><a href="'.$row['url'].'" value="'.$row['nombre'].'"><img src="'.$row['imagen'].'" width="100" height="100""/></a></td>';
                         echo '<td><a href="'.$row['url'].'">'.$row['nombre'].'</a></td>';
                     echo '</tr>';
                 }
