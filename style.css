@@ -187,6 +187,7 @@ html {
 
 .chat {
     float: right;
+    margin-left: 220px;
 }
 
 .mensajes {
@@ -365,35 +366,33 @@ input::input-placeholder {
 
 .copyRight {
     height: 20px;
-   `margin-top: 800px;
-    margin-left: 150px;
+    margin-top: 0px;
+    margin-left: 20px;
+    color: #0000FF;
+    text-decoration: bold;
 }
 
+.posiciones {
+    float: left;
+    margin-left: 0px;
+    margin-top: 3px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px; 
+    -webkit-border-radius: 8px;
+    background: -moz-linear-gradient(#02639D,#033847);
+    background: -ms-linear-gradient(#02639D,#033847);
+    background: -o-linear-gradient(#02639D,#033847);
+    background: -webkit-linear-gradient(#02639D,#033847);
+    background: linear-gradient(#02639D,#033847);
+    color: #FFFFFF;
+    border-color: #00293E;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.youtube {
+    
+    margin-top: 0px;
+}
 
 
 
@@ -595,7 +594,7 @@ input::input-placeholder {
     border: 1px solid black;
     float: right;
     height: 100%; 
-    width: 259px;  
+    width: 259px;
      } 
 
   aside nav{

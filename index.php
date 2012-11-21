@@ -14,6 +14,7 @@
     <script type="text/javascript" src="contact.js"></script>
     <script type="text/javascript" src="login.js"></script>
     <script type="text/javascript" src="registro.js"></script>
+    <script type="text/javascript" src="/jwplayer/jwplayer.js"></script>
 
     <script type="text/javascript">
 
@@ -46,7 +47,16 @@
 
     </script>-->
 </head>  
-<body>  
+<body> 
+    <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/es_LA/all.js#xfbml=1";
+            fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+        </script> 
     <inicio class="inicio">
         <ul>
             <li><input type="button" value="Inicio" class="btnInicio"/></li>
@@ -88,36 +98,124 @@
                 </object> 
             </div>                 
         </div>               
-        <article id="contenido">   
-              
-        </article>  
-        <section class="chat">
-            <?
-                session_start();
-                include("conexionBD.php");
-                if(isset($_SESSiON['usuario'])) {
-                    ?>
-                    <table with="300" height="500">
-                        <form method="POST" action="chat.php">
-                            <tr>
-                                <td><iframe class="mensajes" src="mensajes.php" name="chatFrame" width="250" height="400"></iframe></td>
-                            </tr>
-                            <tr>
-                                <td><input class="txtMensaje" type="text" name="mensaje"/> 
-                                    <button class="btnInicio" type="submit" name="enviar">Enviar</button></td>    
-                            </tr>
-                        </form>
-                    </table>
+        <article id="contenido">
+            <table border ="2">
+                <tr>
+                <td>                     
+                     <div class="fb-like" data-href="https://www.facebook.com/pages/Douticocom/313709275307261?fref=ts" data-send="false" data-width="400" data-show-faces="true"></div>        
+                </td>
+                <td>
+                    <section class="chat">
                     <?
-                }
-            ?>    
-        </section>          
-    </div>
-    <footer>         
+                        session_start();
+                        include("conexionBD.php");
+                        if(isset($_SESSiON['usuario'])) {
+                        ?>
+                            <table width="300" height="400">
+                            <form method="POST" action="chat.php">
+                                <tr>
+                                    <td><iframe class="mensajes" src="mensajes.php" name="chatFrame" width="250" height="300"></iframe></td>
+                                </tr>
+                                <tr>
+                                    <td><input class="txtMensaje" type="text" name="mensaje"/> 
+                                        <button class="btnInicio" type="submit" name="enviar">Enviar</button></td>    
+                                </tr>
+                            </form>
+                            </table>
+                        <?
+                        }
+                        ?>    
+                    </section> 
+                </td>
+            </tr>
+            
+            </tr>
+            </table>
+            <table border="2">
+                <tr>
+                    <td>
+                        <iframe width="560" height="315" src="http://www.youtube.com/embed/5ISxxiU4Ypo" frameborder="0" allowfullscreen></iframe>
+                    </td>
+                    <td>
+                        <table class="posiciones" border = "2" cellspacing = "5px">
+                            <tr>                   
+                                <th>Posición</th>
+                                <th>Equipo</th>
+                                <th>Pts</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Saprissa</td>
+                                <td>40</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Alajuela</td>
+                                <td>40</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Heredia</td>
+                                <td>34</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Limón</td>
+                                <td>33</td>
+                            </tr> 
+                            <tr>
+                                <td>5</td>
+                                <td>Pérez Zeledón</td>
+                                <td>29</td>
+                            </tr> 
+                            <tr>
+                                <td>6</td>
+                                <td>Santos</td>
+                                <td>28</td>
+                            </tr> 
+                            <tr>
+                                <td>7</td>
+                                <td>Belén</td>
+                                <td>28</td>
+                            </tr> 
+                            <tr>
+                                <td>8</td>
+                                <td>Uruguay</td>
+                                <td>27</td>
+                            </tr> 
+                            <tr>
+                                <td>9</td>
+                                <td>Carmelita</td>
+                                <td>25</td>
+                            </tr> 
+                            <tr>
+                                <td>10</td>
+                                <td>Cartago</td>
+                                <td>20</td>
+                            </tr> 
+                            <tr>
+                                <td>11</td>
+                                <td>San Carlos</td>
+                                <td>20</td>
+                            </tr> 
+                            <tr>
+                                <td>12</td>
+                                <td>Puntarenas</td>
+                                <td>19</td>
+                            </tr>
+                        </table>
+
+                    </td>
+                </tr>
+            </table>   
+        </article>  
+         
+        <footer>         
         <div class="copyRight">
             <p>Copyright © Doutico | doutico.com. All rights reserved | Design by Fabricio Salazar Espinoza, Jorge Rojas Aragon&eacutes, Harvey Sand&iacute S&aacutenchez, Marvin Sandoval Ugalde</p>
         </div>
-    </footer>
+        </footer>        
+    </div>    
     <div class="contenedor-registro">
         <form class="ventana-registro zoomout" action="registro.php" method="POST">
             <ul>
