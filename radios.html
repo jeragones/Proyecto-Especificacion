@@ -9,6 +9,10 @@
 </head>
 
 <body>
+
+
+   
+
     <inicio class="inicio">
         <ul>
             <li><input type="button" value="Inicio" class="btnInicio"/></li>
@@ -39,9 +43,12 @@
 
 
   
+ <article>
+
 
    
-            <aside ID="barnRadio">       
+            <aside ID="barnRadio">    
+                <div ID="bRadio">   
                 <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="32" height="32">
                     <param name="movie" value="Banner1.swf" />
                     <param name="quality" value="high" />
@@ -52,26 +59,12 @@
                     <param name="movie" value="Banner2.swf" />
                     <param name="quality" value="high" />
                     <embed src="Banner2.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="160" height="397"></embed>
-                </object>                                                      
+                </object>  
+                </div>                                                    
             </aside>
-
-            <div id="fb-root"></div>
-               <script>(function(d, s, id) {
-                 var js, fjs = d.getElementsByTagName(s)[0];
-                if (d.getElementById(id)) return;
-                    js = d.createElement(s); js.id = id;
-                    js.src = "//connect.facebook.net/es_LA/all.js#xfbml=1";
-                    fjs.parentNode.insertBefore(js, fjs);
-                    }(document, 'script', 'facebook-jssdk'));
-                </script>
-             <div class="fb-like" data-href="https://www.facebook.com/pages/Douticocom/313709275307261?fref=ts" data-send="false" data-width="560" data-show-faces="true"></div>
-            
-        <iframe frameborder="0" scrolling="no" width="633" height="798" 
-                 src="http://www.cdr.cr/player_compartido/19/Exa"></frame>
         
-                  
-        <aside ID="chatradio">
-          <?
+                  <div ID="chatradio">
+            <?
                 session_start();
                 include("conexionBD.php");
                 if(isset($_SESSiON['usuario'])) {
@@ -94,20 +87,48 @@
                     <?
                 } else {
                    
-                }
-            
-            ?> 
-         
-       </aside>
-  
+                }            
+            ?>  
+            </div>        
+                
+                 
+                <div id="fb-root"></div>
+                   <script>(function(d, s, id) {
+                    var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                    js = d.createElement(s); js.id = id;
+                    js.src = "//connect.facebook.net/es_LA/all.js#xfbml=1";
+                    fjs.parentNode.insertBefore(js, fjs);
+                    }(document, 'script', 'facebook-jssdk'));
+                 </script>
 
+            <aside>
+                <div ID="FBRadio">
+                 <object class = "likeflash" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="32" height="32">
+                        <param name="movie" value="Like.swf" />
+                        <param name="quality" value="high" />
+                        <embed src="Like.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="560" height="315"></embed>
+                  </object>   
+
+                 <div class="fb-like" data-href="https://www.facebook.com/pages/Douticocom/313709275307261?fref=ts" data-send="false" data-width="560" data-show-faces="true"></div>
+                  </div>
+            </aside>
+            
      
+    
+  
+       
+
+    <div ID="radio">
+     <iframe frameborder="0" scrolling="no" width="290" height="153" src="http://www.cdr.cr/player_compartido/20/Zeta%20FM"></iframe>
+    </div>
+     </article>
      
 
         <footer>         
             <div class="copyRight">
                 <p>Copyright © Doutico | doutico.com. All rights reserved | Design by Fabricio Salazar Espinoza, Jorge Rojas Aragon&eacutes, Harvey Sand&iacute S&aacutenchez, Marvin Sandoval Ugalde</p>
             </div>
-        </footer>   
+        </footer>  
 </body>
 </html>
