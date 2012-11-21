@@ -187,7 +187,7 @@ html {
 
 .chat {
     float: right;
-    margin-left: 220px;
+    margin-left: 0px;
 }
 
 .mensajes {
@@ -374,7 +374,7 @@ input::input-placeholder {
 
 .posiciones {
     float: left;
-    margin-left: 0px;
+    margin-left: 40px;
     margin-top: 3px;
     -moz-border-radius: 8px;
     -ms-border-radius: 8px;
@@ -389,9 +389,16 @@ input::input-placeholder {
     border-color: #00293E;
 }
 
+.fb-like {
+    margin-left: 20px;
+}
+
+.likeflash {
+    margin-left: 20px;
+}
+
 .youtube {
-    
-    margin-top: 0px;
+    margin-left: 20px;
 }
 
 

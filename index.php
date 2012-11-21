@@ -99,10 +99,15 @@
             </div>                 
         </div>               
         <article id="contenido">
-            <table border ="2">
+            <table>
                 <tr>
-                <td>                     
-                     <div class="fb-like" data-href="https://www.facebook.com/pages/Douticocom/313709275307261?fref=ts" data-send="false" data-width="400" data-show-faces="true"></div>        
+                <td>  
+                    <object class = "likeflash" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="32" height="32">
+                        <param name="movie" value="Like.swf" />
+                        <param name="quality" value="high" />
+                        <embed src="Like.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="560" height="315"></embed>
+                    </object>                    
+                     <div class="fb-like" data-href="https://www.facebook.com/pages/Douticocom/313709275307261?fref=ts" data-send="false" data-width="560" data-show-faces="true"></div>        
                 </td>
                 <td>
                     <section class="chat">
@@ -131,10 +136,10 @@
             
             </tr>
             </table>
-            <table border="2">
+            <table >
                 <tr>
                     <td>
-                        <iframe width="560" height="315" src="http://www.youtube.com/embed/5ISxxiU4Ypo" frameborder="0" allowfullscreen></iframe>
+                        <iframe class = "youtube" width="560" height="315" src="http://www.youtube.com/embed/5ISxxiU4Ypo" frameborder="0" allowfullscreen></iframe>
                     </td>
                     <td>
                         <table class="posiciones" border = "2" cellspacing = "5px">
