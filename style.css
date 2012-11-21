@@ -629,3 +629,17 @@ input::input-placeholder {
     padding: 21px 0px 21px 60px;
     background-image: url('img/fondo1.jpg');  
   }
+#barnRadio{
+    border:1px solid black;
+    width:163px;
+    float:left;
+    height: 798px; 
+}
+
+#chatradio{
+    background-image: url('img/fondo3.jpg');
+    border: 1px solid black;
+    float: right;
+    height: 100%; 
+    width: 100%;
+}

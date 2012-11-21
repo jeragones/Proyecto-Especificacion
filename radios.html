@@ -1,0 +1,113 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title>Televisoras</title>
+    <link rel="shortcut icon" href="crflag.jpg" type="image/x-icon"/>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="/jwplayer/jwplayer.js"></script>
+</head>
+
+<body>
+    <inicio class="inicio">
+        <ul>
+            <li><input type="button" value="Inicio" class="btnInicio"/></li>
+            <li><input id="contact" type="button" value="Contactar" class="btnInicio" data-type="zoomout"/></li>
+            <li><input id="login" type="button" value="Sesión" class="btnInicio" data-type="zoomout"/></li>
+            <li><input type="button" value="Registrarse" class="btnInicio"/></li>
+        </ul>
+    </inicio>
+
+
+    <div class="main">
+        <header class = "header">  
+            <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="32" height="32">
+                <param name="movie" value="DouticoHeader.swf" />
+                <param name="quality" value="high" />
+                <embed src="DouticoHeader.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="1100" height="110"></embed>
+            </object>
+        </header>  
+
+        <nav class="navegacion">  
+            <ul><li><a onclick="">Radios</a></li>
+                <li><a onclick="">Periodicos</a></li>
+                <li><a onclick="">Deportes</a></li>
+                <li><a onclick="">Herencia</a></li>
+                <li><a onclick="">Pronostico</a></li>              
+            </ul>
+        </nav> 
+
+
+  
+
+   
+            <aside ID="barnRadio">       
+                <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="32" height="32">
+                    <param name="movie" value="Banner1.swf" />
+                    <param name="quality" value="high" />
+                    <embed src="Banner1.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="160" height="397"></embed>
+                </object>           
+      
+                <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="32" height="32">
+                    <param name="movie" value="Banner2.swf" />
+                    <param name="quality" value="high" />
+                    <embed src="Banner2.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="160" height="397"></embed>
+                </object>                                                      
+            </aside>
+
+            <div id="fb-root"></div>
+               <script>(function(d, s, id) {
+                 var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                    js = d.createElement(s); js.id = id;
+                    js.src = "//connect.facebook.net/es_LA/all.js#xfbml=1";
+                    fjs.parentNode.insertBefore(js, fjs);
+                    }(document, 'script', 'facebook-jssdk'));
+                </script>
+             <div class="fb-like" data-href="https://www.facebook.com/pages/Douticocom/313709275307261?fref=ts" data-send="false" data-width="560" data-show-faces="true"></div>
+            
+        <iframe frameborder="0" scrolling="no" width="633" height="798" 
+                 src="http://www.cdr.cr/player_compartido/19/Exa"></frame>
+        
+                  
+        <aside ID="chatradio">
+          <?
+                session_start();
+                include("conexionBD.php");
+                if(isset($_SESSiON['usuario'])) {
+                    ?>
+                    <table with="300" height="500">
+                        <form class="chat" method="POST" action="chat.php">
+                            <tr>
+                                <td><iframe class="mensajes" src="mensajes.php" name="chatFrame" width="250" height="400"></iframe></td>
+                            </tr>
+                            <tr>
+                                <td><input class="txtMensaje" type="text" name="mensaje"/> 
+                                    <button class="btnInicio" type="submit" name="enviar">Enviar</button></td>    
+                            </tr>
+                            <tr>
+                                <? $usuario = $_SESSiON['usuario']; ?>
+                               
+                            </tr>
+                        </form>
+                    </table>
+                    <?
+                } else {
+                   
+                }
+            
+            ?> 
+         
+       </aside>
+  
+
+     
+     
+
+        <footer>         
+            <div class="copyRight">
+                <p>Copyright © Doutico | doutico.com. All rights reserved | Design by Fabricio Salazar Espinoza, Jorge Rojas Aragon&eacutes, Harvey Sand&iacute S&aacutenchez, Marvin Sandoval Ugalde</p>
+            </div>
+        </footer>   
+</body>
+</html>
